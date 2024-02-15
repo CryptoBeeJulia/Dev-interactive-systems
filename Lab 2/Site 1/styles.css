@@ -1,3 +1,27 @@
 body{
     margin: 0;
+    font-family: "Poppins", sans-serif;
+    font-weight: 200;
+    background-image: url(snow.jpeg);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+
 }
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    
+}
+
+.countElement{
+    text-align: center;
+}
+
+.bigText {
+    margin: 0 50px;
+}
+
+
