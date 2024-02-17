@@ -45,6 +45,7 @@ input[type="text"] {
 
 .fa-magnifying-glass {
     color: #fff;
+    padding-left: 7px;
 }
 .fa-magnifying-glass:hover {
     color: #ffd700;
@@ -73,7 +74,7 @@ a:hover {
 }
 
 img {
-    max-width: 100%;
+    max-width: 50%;
     height: auto;
     border-radius: 25px;
     
