@@ -22,6 +22,7 @@ h1{
 
 .flex-container{
     display: flex;
+    flex-basis: auto;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
@@ -71,21 +72,58 @@ a:hover {
 .grid-container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-bottom: 5%;
 }
 
-img {
-    max-width: 50%;
-    height: auto;
-    border-radius: 25px;
-    
-  }
+
 
 .users{
     display: flex;
 }
 
-#col2{
+.card {
     display: flex;
-    flex-direction: column;
+    border: 1px solid #ddd;
+    margin: 10px;
+    padding: 10px;
+    text-decoration: none;
 }
 
+
+#col1 img {
+    width: 70%;
+    display: block;
+    height: auto;
+    border-radius: 15px; 
+}
+
+#col2 {
+    flex: 1; 
+}
+
+h2 {
+    margin: 0;
+    font-size: 1.2em;
+}
+
+p {
+    margin: 5px 0;
+    color: #666;
+}
+
+
+.tag {
+    margin-right: 5px;
+    background-color: #f0f0f0; /* Background color for tags */
+    border: 1px solid #ddd; /* Border color for tags */
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+/* Hover effect for the card */
+.card:hover {
+    border-color: #ffd700;
+    box-shadow: 10px -10px teal;
+}
