@@ -27,7 +27,7 @@ h1{
     justify-content: space-between;
     align-items: center;
     align-items: center;
-    padding: 4%;
+    padding: 3%;
     width: auto;
 }
 
@@ -77,14 +77,12 @@ a:hover {
     padding-bottom: 5%;
 }
 
-
-
 .users{
-    display: flex;
+    display:flex;
+    flex-grow: 2;
 }
 
 .card {
-    display: flex;
     border: 1px solid #ddd;
     margin: 10px;
     padding: 10px;
@@ -92,15 +90,18 @@ a:hover {
 }
 
 
+
 #col1 img {
-    width: 70%;
-    display: block;
+    width: 80px;
     height: auto;
-    border-radius: 15px; 
+    border-radius: 50px;
 }
 
 #col2 {
     flex: 1; 
+    padding-top: 20px;
+    padding-right: 10px;
+    
 }
 
 h2 {
@@ -109,17 +110,25 @@ h2 {
 }
 
 p {
-    margin: 5px 0;
-    color: #666;
+    color: rgb(174, 174, 174);
+    font-weight: 1;
+    font-size: small;
 }
-
 
 .tag {
     margin-right: 5px;
-    background-color: #f0f0f0; /* Background color for tags */
-    border: 1px solid #ddd; /* Border color for tags */
+    background-color: rgb(31, 73, 88);
+    border: 1px solid #ddd;
+    border-radius: 5%;
     padding: 5px 10px;
     cursor: pointer;
+    color: #ddd;
+    margin-bottom: 10px;
+}
+
+.tag:hover {
+    background-color: #ffd700;
+    color: teal;
 }
 
 /* Hover effect for the card */
