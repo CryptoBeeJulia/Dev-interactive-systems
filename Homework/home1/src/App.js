@@ -28,6 +28,12 @@ function Square({value, onClick})
   function Board() {
     const [squares, setSquares] = React.useState(Array(9).fill(null))
     const [isX, setisX] = React.useState(true)
+
+    const handleClick = (i) => {
+      squares[i] = isX? 'X' : 'O'
+
+    }
+
     return (
       <div className="board">
         <div className="boardRow">
@@ -117,7 +123,12 @@ function Board() {
     return (...
 
 
-step 5: 
+step 5: handleClick function added
+
+  const handleClick = (i) => {
+      squares[i] = isX? 'X' : 'O'
+
+    }
 
 
 */
