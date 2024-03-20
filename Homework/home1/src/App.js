@@ -24,6 +24,8 @@ function Square({value, onClick})
   }
 
 function Board() {
+  
+
   return (
     <div className="board">
       <div className="boardRow">
