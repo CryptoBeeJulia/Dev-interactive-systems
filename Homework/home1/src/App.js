@@ -14,10 +14,10 @@ function App() {
 
 // note! if the below function works, it replaces the Hello function!
 
-function Square({value})
+function Square({value, onClick})
 {
   return (
-    <button className = "square">
+    <button className = "square" onClick={onClick}>
     {value}
     </button>
     )
@@ -106,5 +106,17 @@ step 2: board structure rendered
     <Board />, 
     document.getElementById('root')
   )
+
+
+  step 3: onClick added to Square function
+
+  function Square({value, onClick})
+{
+  return (
+    <button className = "square" onClick={onClick}>
+    {value}
+    </button>
+    )
+  }
 
 */
