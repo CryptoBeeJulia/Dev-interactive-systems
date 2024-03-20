@@ -23,10 +23,32 @@ function Square({value})
     )
   }
 
+function Board() {
+  return (
+    <div className="board">
+      <div className="boardRow">
+        <Square value={'X'}/>
+        <Square value={'O'}/>
+        <Square value={'X'}/>
+      </div>
+      <div className="boardRow">
+        <Square value={'O'}/>
+        <Square value={'X'}/>
+        <Square value={'O'}/>
+      </div>
+      <div className="boardRow">
+        <Square value={'X'}/>
+        <Square value={'O'}/>
+        <Square value={'X'}/>
+      </div>
+    </div>
+  )
+}
+
 
 
   ReactDOM.render(
-    <Square value={'X'}/>, 
+    <Board />, 
     document.getElementById('root')
   )
 
@@ -50,6 +72,38 @@ function Square({value})
 
   ReactDOM.render(
     <Square value={'X'}/>, 
+    document.getElementById('root')
+  )
+
+
+step 2: board structure rendered
+
+  function Board() {
+  return (
+    <div className="board">
+      <div className="boardRow">
+        <Square value={'X'}/>
+        <Square value={'O'}/>
+        <Square value={'X'}/>
+      </div>
+      <div className="boardRow">
+        <Square value={'O'}/>
+        <Square value={'X'}/>
+        <Square value={'O'}/>
+      </div>
+      <div className="boardRow">
+        <Square value={'X'}/>
+        <Square value={'O'}/>
+        <Square value={'X'}/>
+      </div>
+    </div>
+  )
+}
+
+
+
+  ReactDOM.render(
+    <Board />, 
     document.getElementById('root')
   )
 
