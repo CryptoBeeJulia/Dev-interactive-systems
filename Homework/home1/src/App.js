@@ -12,6 +12,8 @@ function App() {
   );
 }
 
+
+
 // note! if the below function works, it replaces the Hello function!
 
 function Square({value, onClick})
@@ -23,59 +25,45 @@ function Square({value, onClick})
     )
   }
 
-function Board() {
+  function Board() {
+    const [squares, setSquares] = React.useState(Array(9).fill(null))
+    const [isX, setisX] = React.useState(true)
+    return (
+      <div className="board">
+        <div className="boardRow">
+          <Square value={'X'}/>
+          <Square value={'O'}/>
+          <Square value={'X'}/>
+        </div>
+        <div className="boardRow">
+          <Square value={'O'}/>
+          <Square value={'X'}/>
+          <Square value={'O'}/>
+        </div>
+        <div className="boardRow">
+          <Square value={'X'}/>
+          <Square value={'O'}/>
+          <Square value={'X'}/>
+        </div>
+      </div>
+    )
+  }
   
+  
+  
+    ReactDOM.render(
+      <Board />, 
+      document.getElementById('root')
+    )
 
-  return (
-    <div className="board">
-      <div className="boardRow">
-        <Square value={'X'}/>
-        <Square value={'O'}/>
-        <Square value={'X'}/>
-      </div>
-      <div className="boardRow">
-        <Square value={'O'}/>
-        <Square value={'X'}/>
-        <Square value={'O'}/>
-      </div>
-      <div className="boardRow">
-        <Square value={'X'}/>
-        <Square value={'O'}/>
-        <Square value={'X'}/>
-      </div>
-    </div>
-  )
-}
-
-
-
-  ReactDOM.render(
-    <Board />, 
-    document.getElementById('root')
-  )
-
-
-export default App;
+    export default App; 
+   
 
 /*
 
 step 1: square rendered and working
 
-function Square({value})
-{
-  return (
-    <button className = "square">
-    {value}
-    </button>
-    )
-  }
 
-
-
-  ReactDOM.render(
-    <Square value={'X'}/>, 
-    document.getElementById('root')
-  )
 
 
 step 2: board structure rendered
@@ -120,5 +108,16 @@ step 2: board structure rendered
     </button>
     )
   }
+
+  step 4: new consts in board function
+
+function Board() {
+    const [squares, setSquares] = React.useState(Array(9).fill(null))
+    const [isX, setisX] = React.useState(true)
+    return (...
+
+
+step 5: 
+
 
 */
