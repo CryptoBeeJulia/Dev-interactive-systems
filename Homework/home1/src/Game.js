@@ -1,18 +1,11 @@
 
-import ReactDOM from 'react-dom';
-
-function Square({value})
-{
+export default function Square() {
   return (
-    <button className = "square">
-    {value}
-    </button>
-    )
-  }
+    <>
+      <button className="square">X</button>
+      <button className="square">X</button>
+    </>
+  );
+}
 
-  ReactDOM.render(
-    <Square value = {'X'}/>,
-    document.getElementById('root')
-  )
-
-export default Square; 
+export {Game}; 

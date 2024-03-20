@@ -2,13 +2,20 @@ import logo from './logo.svg';
 import './App.css';
 import ReactDOM from 'react-dom';
 import React from 'react'
+import Game  from './Game';
+import { Board } from './Board';
 
 function App() {
   return (
-    <div className="App">
-      <h1>Hello World!</h1>
-      <p>Made in React App</p>
-    </div>
+   // <div className="App">
+     // <h1>Hello World!</h1>
+     // <p>Made in React App</p>
+      
+   // </div>
+   <>
+   <Board/>
+   </>
+   
   );
 }
 
