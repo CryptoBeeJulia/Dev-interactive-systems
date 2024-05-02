@@ -14,17 +14,17 @@ const App = () => {
 
             <div className = "navbar">
 
-                <Navbar />
+                <Navbar/>
 
             </div>
 
             <div className = "main">
-
-        
         
                 <Homepage/>
-             
-           
+
+            </div>
+
+            <div className = "coin">
 
             </div>
 

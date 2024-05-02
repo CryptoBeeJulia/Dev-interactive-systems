@@ -1,6 +1,6 @@
-import React from "react";
-
+import React, { useState, useEffect } from "react";
 import axios from 'axios';
+
 
 const options = {
   method: 'GET',
@@ -23,24 +23,32 @@ try {
 
 
 const Homepage = () => {
+  const [totalCoins, setTotalCoins] = useState(null);
 
-    
-  const globalStats = axios.request(options);
-  console.log(globalStats.data);
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await axios.request(options);
+        setTotalCoins(response.data.totalCoins);
+      } catch (error) {
+        console.error(error);
+      }
+    };
  
+    fetchData();
 
+  }, []);
 
-    return (
-        <>
-        
-        <h2>Global crypto stats</h2>
+  return (
+    <>
+      <h2>Global crypto stats</h2>
+      <div>
+        <p>Total Coins: {totalCoins}</p>
+        {/*<p>Total Volume /24h: {total24hVolume}</p>
+        <p>Total Market Capitalization: {totalMarketCap}</p>*/}
 
-        <div>
-        <p>Total Coins </p>
-        
       </div>
-        
-        </>
+    </>
   );
 };
 
