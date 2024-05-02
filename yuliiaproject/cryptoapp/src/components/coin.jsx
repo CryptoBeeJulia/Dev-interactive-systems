@@ -54,6 +54,8 @@ const Coin = () => {
               <div>
                 <img src={coin.iconUrl} alt={coin.name} style={{ width: '50px', height: '50px' }} />
                 <span>{coin.name}</span> ({coin.symbol})
+                <p>Current price: ${coin.price}</p>
+                <p>24h change: {coin.change}%</p>
               </div>
             </li>
           ))}

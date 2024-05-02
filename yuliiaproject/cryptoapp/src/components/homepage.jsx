@@ -51,8 +51,8 @@ const Stats = () => {
       {stats && (
         <div>
           <p>Total Coins: {stats.totalCoins}</p>
-          <p>Total 24h Volume: {stats.total24hVolume}</p>
-          <p>Total Market Cap: {stats.totalMarketCap}</p>
+          <p>Total 24h Volume: ${stats.total24hVolume}</p>
+          <p>Total Market Cap: ${stats.totalMarketCap}</p>
         </div>
       )}
     </div>
