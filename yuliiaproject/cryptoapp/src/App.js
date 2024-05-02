@@ -5,6 +5,7 @@ import React from 'react';
 
 import Navbar from './components/navbar';
 import Homepage from './components/homepage';
+import Coin from './components/coin';
 
 const App = () => {
     return (
@@ -25,6 +26,8 @@ const App = () => {
             </div>
 
             <div className = "coin">
+
+                <Coin/>
 
             </div>
 
