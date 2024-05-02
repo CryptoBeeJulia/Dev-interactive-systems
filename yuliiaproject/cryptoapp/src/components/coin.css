@@ -1,0 +1,43 @@
+.coin-container {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  .coin-list {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .coin-item {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+  }
+  
+  .coin-img {
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+  }
+  
+  .coin-details {
+    flex: 1;
+  }
+  
+  .coin-name {
+    font-weight: bold;
+  }
+  
+  .coin-price {
+    margin-top: 5px;
+  }
+  
+  .coin-change {
+    color: green;
+  }
+  
+  .coin-change.negative {
+    color: red;
+  }

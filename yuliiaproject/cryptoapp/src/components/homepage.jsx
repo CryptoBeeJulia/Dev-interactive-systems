@@ -44,6 +44,7 @@ const Stats = () => {
 
     fetchStats();
   }, []);
+  
 
   return (
     <div>

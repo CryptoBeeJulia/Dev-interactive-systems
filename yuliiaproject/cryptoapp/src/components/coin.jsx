@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import axios from 'axios';
-
+import './coin.css';
 
 
 const options = {
@@ -46,16 +46,18 @@ const Coin = () => {
     }, []);
   
     return (
-      <div>
+      <div className="coin-container">
         <h2>List of Coins</h2>
-        <ul>
+        <ul className="coin-list">
           {coins.map((coin, index) => (
-            <li key={index}>
+            <li key={index} className="coin-item">
               <div>
-                <img src={coin.iconUrl} alt={coin.name} style={{ width: '50px', height: '50px' }} />
-                <span>{coin.name}</span> ({coin.symbol})
-                <p>Current price: ${coin.price}</p>
-                <p>24h change: {coin.change}%</p>
+                <img className="coin-img" src={coin.iconUrl} alt={coin.name} />
+                <div className="coin-details">
+                  <span className="coin-name">{coin.name}</span> ({coin.symbol})
+                  <p className="coin-price">Current price: ${coin.price}</p>
+                  <p className={`coin-change ${coin.change < 0 ? 'negative' : ''}`}>24h change: {coin.change}%</p>
+                </div>
               </div>
             </li>
           ))}
