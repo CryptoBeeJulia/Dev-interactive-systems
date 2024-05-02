@@ -4,7 +4,7 @@ import './App.css';
 import React from 'react';
 
 import Navbar from './components/navbar';
-import Homepage from './components/homepage';
+import Stats from './components/homepage';
 import Coin from './components/coin';
 
 const App = () => {
@@ -21,7 +21,7 @@ const App = () => {
 
             <div className = "main">
         
-                <Homepage/>
+                <Stats/>
 
             </div>
 
