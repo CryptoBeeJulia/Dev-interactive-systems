@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import axios from 'axios';
+import './stats.css';
 
 
 
@@ -47,13 +48,13 @@ const Stats = () => {
   
 
   return (
-    <div>
-      <h2>Global Crypto Stats</h2>
+    <div className="stats-container">
+      <h2 className="stats-heading">Global Crypto Stats</h2>
       {stats && (
         <div>
-          <p>Total Coins: {stats.totalCoins}</p>
-          <p>Total 24h Volume: ${stats.total24hVolume}</p>
-          <p>Total Market Cap: ${stats.totalMarketCap}</p>
+          <p className="stats-item"><span className="stats-label">Total Coins:</span> <span className="stats-value">{stats.totalCoins}</span></p>
+          <p className="stats-item"><span className="stats-label">Total 24h Volume:</span> <span className="stats-value">${stats.total24hVolume}</span></p>
+          <p className="stats-item"><span className="stats-label">Total Market Cap:</span> <span className="stats-value">${stats.totalMarketCap}</span></p>
         </div>
       )}
     </div>
