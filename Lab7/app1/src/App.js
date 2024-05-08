@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import './App.css';
 import APIKey from './config';
 import Movie from './components/Movie';
+import Search from './components/Search';
 //import "./Movie.css";
 
 
@@ -25,22 +26,6 @@ useEffect( ()=> {
 }
 ,[])
 
-
-const handleOnSubmit = (e) => {
-  e.preventDefault();
-
-  if(searchTerm)
-  {
-    fetch(SearchURL + APIKey + "&query=" + searchTerm)
-    .then( (resp) => resp.json() )
-    .then( (data) => {
-      console.log(data.results);
-      setMovieResults(data.results);
-    })
-  }
-
-}
-
 const handleOnChange = (e) => {
   console.log(e.target.value)
   setSearchTerm(e.target.value)
@@ -48,19 +33,16 @@ const handleOnChange = (e) => {
 return (
   <>
   <header>
-    <form onSubmit={handleOnSubmit}>
-      <input className='search' type="search" placeholder='Search...' value={searchTerm} onChange={handleOnChange}></input>
-    </form>
+    <Search/>
   </header>
     
-    
-    <div className = 'movie-container'>
+  <div className = 'movie-container'>
     {movieResults.map( (element) => (<Movie key={element.id} {...element}/>)
 
     )}
-    </div>
+  </div>
 
-    </>
+  </>
 
   );
 }
