@@ -14,44 +14,44 @@ const [movieResults, setMovieResults] = useState([]);
 const [searchTerm, setSearchTerm] = useState('');
 //const movieResults = [1,2,3];
 
-useEffect( () => {
+useEffect( ()=> {
   fetch(APIURL + APIKey)
-  .then( (response) => response.json() )
+  .then( (resp) => resp.json() )
   .then( (data) => {
-    console.log(data.results);
-    setMovieResults(data.results);
-  }
-  )
-
-
+      console.log(data.results);
+      setMovieResults(data.results);
+      }
+      )
 }
 ,[])
 
-const handleOnSubmit = (e) =>{
+
+const handleOnSubmit = (e) => {
   e.preventDefault();
-  if(searchTerm){
-    fetch(SearchURL + APIKey + "&query=" + searchTerm) 
-    .then( (resp) => resp.json() ) 
+
+  if(searchTerm)
+  {
+    fetch(SearchURL + APIKey + "&query=" + searchTerm)
+    .then( (resp) => resp.json() )
     .then( (data) => {
-    console.log(data.results);
-    setMovieResults(data.results);
+      console.log(data.results);
+      setMovieResults(data.results);
+    })
   }
-    )
-  }
+
 }
 
 const handleOnChange = (e) => {
-  console.log(e.targer.value);
+  console.log(e.target.value)
   setSearchTerm(e.target.value)
 }
-  return (
-    <>
+return (
+  <>
+  <header>
     <form onSubmit={handleOnSubmit}>
-      <input className = "search" type = "search" placeholder = 'Search...' value = {searchTerm} onChange = {handleOnChange}></input>
+      <input className='search' type="search" placeholder='Search...' value={searchTerm} onChange={handleOnChange}></input>
     </form>
-    <header>
-      
-    </header>
+  </header>
     
     
     <div className = 'movie-container'>
