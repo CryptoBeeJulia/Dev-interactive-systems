@@ -19,6 +19,10 @@ function Movie({poster_path, title, overview, vote_average})
             <div className = "movie-info">
                 <h3>{title}</h3>
                 <span>{vote_average}</span>
+                <span className={vote_average > 7 ? 'green' : vote_average >= 5 ? 'yellow' : 'red'}>
+                    {vote_average}
+                </span>
+
             </div>
             <div className = "movie-overview">
                 <h2>Overview:</h2>

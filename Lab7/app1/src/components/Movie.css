@@ -36,6 +36,18 @@ body{
     margin: 0px;
 }
 
+.green {
+    color: green;
+}
+
+.yellow {
+    color: yellow;
+}
+
+.red {
+    color: red;
+}
+
 .movie-overview{
     position: absolute;
     padding: 5px;
