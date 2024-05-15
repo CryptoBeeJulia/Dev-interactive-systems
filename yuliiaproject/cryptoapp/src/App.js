@@ -13,8 +13,6 @@ const App = () => {
         <BrowserRouter>
         <div className = "app">
 
-            <h3>cryptoapp</h3>
-
             <div className = "navbar">
 
                 <Navbar/>
@@ -24,7 +22,7 @@ const App = () => {
             <Routes>
         <Route path = "/" element = {<Stats/>}></Route>
         <Route path = "/coins" element = {<Coin/>}></Route>
-        </Routes>
+            </Routes>
 
             <div className = "footer">
 
