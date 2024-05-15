@@ -5,6 +5,6 @@ export const CoinDetail = () => {
   const params = useParams();
   //console.log(params);
   return (
-    <div>this is the Coin {params.id} Details page</div>
+    <div>this is the Coins {params.id} Details page</div>
   )
 }
