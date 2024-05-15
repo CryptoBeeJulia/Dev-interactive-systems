@@ -36,3 +36,16 @@
     transform: rotate(360deg);
   }
 }
+
+.logo-img {
+
+  width: 100px;
+  height: auto;
+}
+
+.logo-text {
+  font-size: 14px; 
+  color: #00b894;
+  font-weight: bold;
+  
+}

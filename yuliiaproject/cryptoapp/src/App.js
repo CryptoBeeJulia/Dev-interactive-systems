@@ -11,7 +11,7 @@ const App = () => {
     return (
         <div className = "app">
 
-            <h1>cryptoapp</h1>
+            <h3>cryptoapp</h3>
 
             <div className = "navbar">
 
