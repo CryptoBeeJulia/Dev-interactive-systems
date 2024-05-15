@@ -7,14 +7,13 @@ const Navbar = () => {
     return (
         <div className = "nav-container">
             <div className = "logo-container">
-
+            <div className="logo-text">CryptoApp</div>
             <a href = "/" className="logo">
             <img src= {cryptologo} className = "logo-img" alt = 'cryptoapp logo'></img>
       </a>     
-                <div className="logo-text">CryptoApp</div>
             </div>
             <nav className = 'navigation'>
-        <NavLink to = "/" className = 'link'>Home</NavLink>
+        <NavLink to = "/" className = 'link'>Stats</NavLink>
         <NavLink to = "/coins" className = 'link'>Coins</NavLink>
       </nav>
         </div>
