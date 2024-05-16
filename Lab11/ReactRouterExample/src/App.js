@@ -1,12 +1,10 @@
 import {BrowserRouter, Routes, Route, Navigate} from 'react-router-dom';
-import {Home} from './components/Home';
+import {Home, ProductDetail, ProductList, Contact, Admin, NotFound} from './pages/Index';
 import './App.css';
-import { ProductList } from './components/ProductList';
-import { ProductDetail } from './components/ProductDetail';
-import { Contact } from './components/Contact';
 import { Header } from './components/Header';
-import { Admin } from './components/Admin';
-import { NotFound } from './components/NotFound';
+import { Footer } from './components/Footer';
+
+
 
 
 function App() {
