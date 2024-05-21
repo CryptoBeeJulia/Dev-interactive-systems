@@ -28,6 +28,14 @@ try {
 	console.error(error);
 }
 
+const formatNumber = (number) => {
+    return new Intl.NumberFormat('en-US', {
+      minimumFractionDigits: 2,
+      maximumFractionDigits: 3,
+    }).format(number);
+  
+};
+
 
 const Coin = () => {
     const [coins, setCoins] = useState([]);
@@ -55,7 +63,7 @@ const Coin = () => {
                 <img className="coin-img" src={coin.iconUrl} alt={coin.name} />
                 <div className="coin-details">
                   <span className="coin-name">{coin.name}</span> ({coin.symbol})
-                  <p className="coin-price">Current price: ${coin.price}</p>
+                  <p className="coin-price">Current price: ${formatNumber(coin.price)}</p>
                   <p className={`coin-change ${coin.change < 0 ? 'negative' : ''}`}>24h change: {coin.change}%</p>
                 </div>
               </div>

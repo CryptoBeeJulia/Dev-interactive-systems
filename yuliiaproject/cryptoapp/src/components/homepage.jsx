@@ -2,7 +2,12 @@ import React, { useState, useEffect } from "react";
 import axios from 'axios';
 import './stats.css';
 
-
+const formatNumber = (number) => {
+  return new Intl.NumberFormat('en-US', {
+    minimumFractionDigits: 0,
+    maximumFractionDigits: 0,
+  }).format(number);
+};
 
 const options = {
   method: 'GET',
@@ -52,9 +57,9 @@ const Stats = () => {
       <h2 className="stats-heading">Global Crypto Stats</h2>
       {stats && (
         <div>
-          <p className="stats-item"><span className="stats-label">Total Coins:</span> <span className="stats-value">{stats.totalCoins}</span></p>
-          <p className="stats-item"><span className="stats-label">Total 24h Volume:</span> <span className="stats-value">${stats.total24hVolume}</span></p>
-          <p className="stats-item"><span className="stats-label">Total Market Cap:</span> <span className="stats-value">${stats.totalMarketCap}</span></p>
+          <p className="stats-item"><span className="stats-label">Total Coins:</span> <span className="stats-value">{formatNumber(stats.totalCoins)}</span></p>
+          <p className="stats-item"><span className="stats-label">Total 24h Volume:</span> <span className="stats-value">${formatNumber(stats.total24hVolume)}</span></p>
+          <p className="stats-item"><span className="stats-label">Total Market Cap:</span> <span className="stats-value">${formatNumber(stats.totalMarketCap)}</span></p>
         </div>
       )}
     </div>
