@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import axios from 'axios';
 import './stats.css';
+import Top10 from "./top10";
 
 const formatNumber = (number) => {
   return new Intl.NumberFormat('en-US', {
@@ -53,8 +54,9 @@ const Stats = () => {
   
 
   return (
+    <div>
     <div className="stats-container">
-      <h2 className="stats-heading">Global Crypto Stats</h2>
+      <h2 className="stats-heading">Global Cryptocurrency Statsistics</h2>
       {stats && (
         <div>
           <p className="stats-item"><span className="stats-label">Total Coins:</span> <span className="stats-value">{formatNumber(stats.totalCoins)}</span></p>
@@ -62,6 +64,8 @@ const Stats = () => {
           <p className="stats-item"><span className="stats-label">Total Market Cap:</span> <span className="stats-value">${formatNumber(stats.totalMarketCap)}</span></p>
         </div>
       )}
+    </div>
+    <Top10/>
     </div>
   );
 };

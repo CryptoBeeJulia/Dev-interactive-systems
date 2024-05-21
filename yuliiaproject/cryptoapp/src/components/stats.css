@@ -1,7 +1,7 @@
 .stats-container {
     width: 100%;
     max-width: 600px;
-    margin: 0 auto;
+    margin-top: 2%;
     background-color: #f8f8f8;
     padding: 20px;
     border-radius: 10px;
@@ -24,3 +24,56 @@
   .stats-value {
     margin-left: 10px;
   }
+
+  .top-coin-container {
+    padding: 20px;
+  }
+  
+  .top-coin-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .top-coin-item {
+    background-color: #f5f5f5;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin-bottom: 20px; /* Add margin between items */
+  }
+  
+  .top-coin-img {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    margin-bottom: 10px;
+  }
+  
+  .top-coin-details {
+    margin-top: 10px;
+  }
+  
+  .top-coin-name {
+    font-weight: bold;
+    font-size: 1.2em;
+  }
+  
+  .top-marketcap,
+  .top-coin-price {
+    margin-top: 5px;
+    font-size: 0.9em;
+  }
+  
+  .coin-change {
+    color: green;
+    margin-top: 5px;
+    font-size: 0.9em;
+  }
+  
+  .coin-change.negative {
+    color: red;
+  }
+
