@@ -1,6 +1,9 @@
+import React from 'react';
+import './pages/footer.css';
+
 export const Footer = () => {
     return (
-      <div>This is the Footer</div>
+      <div>Yuliia's Cryptoapp © 2024</div>
     )
   }
 
