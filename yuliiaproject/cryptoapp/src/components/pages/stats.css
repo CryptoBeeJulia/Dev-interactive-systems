@@ -1,16 +1,15 @@
 .stats-container {
     width: 100%;
     max-width: 600px;
-    margin-top: 2%;
+    margin: 0 auto; 
     background-color: #f8f8f8;
     padding: 20px;
     border-radius: 10px;
+    
   }
   
   .stats-heading {
-    font-size: 24px;
-    font-weight: bold;
-    margin-bottom: 20px;
+    text-align: center;
   }
   
   .stats-item {
@@ -26,7 +25,17 @@
   }
 
   .top-coin-container {
+    width: 100%;
+    max-width: 800px;
+    margin: 20px auto;
     padding: 20px;
+    background-color: #f8f8f8;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  .top-coin-container h2 {
+    text-align: center;
   }
   
   .top-coin-list {
@@ -77,3 +86,10 @@
     color: red;
   }
 
+  .top-coin-item a {
+    text-decoration: none;
+    color: inherit;
+  }
+  .top-coin-item a:hover {
+    color: blue;
+  }

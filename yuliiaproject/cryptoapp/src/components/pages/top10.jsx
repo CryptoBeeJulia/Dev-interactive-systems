@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react";
+import {Link} from 'react-router-dom';
 import axios from 'axios';
 import './coin.css';
+
 
 
 const options = {
@@ -55,10 +57,11 @@ const Top10 = () => {
   
     return (
       <div className="top-coin-container">
-        <h2>Top-10 cryptocurrencies</h2>
+        <h2>Top-10 Cryptocurrencies</h2>
         <ul className="top-coin-list">
         {coins.slice(0, 10).map((coin, index) => (
           <li key={index} className="top-coin-item">
+            <Link to={`/coins/${coin.uuid}`}>
             <div>
                 <img className="top-coin-img" src={coin.iconUrl} alt={coin.name} />
                 <div className="top-coin-details">
@@ -68,6 +71,7 @@ const Top10 = () => {
                   <p className={`coin-change ${coin.change < 0 ? 'negative' : ''}`}>24h change: {coin.change}%</p>
                 </div>
               </div>
+              </Link>
             </li>
           ))}
         </ul>

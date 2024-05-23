@@ -67,7 +67,7 @@ const Coin = () => {
   
     return (
       <div className="coin-container">
-        <h2>List of Coins</h2>
+        <h2>List of Cryptocurrencies</h2>
         <input 
         type="text" 
         placeholder="Search by name or symbol" 

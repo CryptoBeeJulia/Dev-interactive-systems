@@ -1,6 +1,6 @@
 import React from "react";
 import {NavLink} from 'react-router-dom';
-import mylogo from "../components/images/mylogo.png";
+import yuliialogo from "../components/images/yuliialogo.jpg";
 import './navbar.css';
 
 const Navbar = () => {
@@ -8,12 +8,12 @@ const Navbar = () => {
         <div className = "nav-container">
             <div className = "logo-container">
             <a href = "/" className="logo">
-            <img src= {mylogo} className = "logo-img" alt = 'cryptoapp logo'></img>
+            <img src= {yuliialogo} className = "logo-img" alt = 'cryptoapp logo'></img>
       </a>     
             </div>
             <nav className = 'navigation'>
-        <NavLink to = "/" className = 'link'> Global Stats</NavLink>
-        <NavLink to = "/coins" className = 'link'>Coins</NavLink>
+        <NavLink to = "/" className = 'link'>Home</NavLink>
+        <NavLink to = "/coins" className = 'link'>Cryptocurrencies</NavLink>
       </nav>
         </div>
     )

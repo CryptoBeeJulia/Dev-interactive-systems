@@ -56,7 +56,7 @@ const Stats = () => {
   return (
     <div>
     <div className="stats-container">
-      <h2 className="stats-heading">Global Cryptocurrency Statsistics</h2>
+      <h2 className="stats-heading">Global Cryptocurrency Statistics</h2>
       {stats && (
         <div>
           <p className="stats-item"><span className="stats-label">Total Coins:</span> <span className="stats-value">{formatNumber(stats.totalCoins)}</span></p>
