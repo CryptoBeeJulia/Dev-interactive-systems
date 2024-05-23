@@ -3,6 +3,7 @@ import axios from 'axios';
 import './coin.css';
 
 
+
 const options = {
   method: 'GET',
   url: 'https://coinranking1.p.rapidapi.com/coins',

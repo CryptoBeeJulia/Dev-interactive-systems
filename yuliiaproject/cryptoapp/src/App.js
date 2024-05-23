@@ -2,13 +2,13 @@
 import './App.css';
 
 import React from 'react';
-import {BrowserRouter, Routes, Route, Navigate} from 'react-router-dom';
+import {BrowserRouter, Routes, Route} from 'react-router-dom';
 
 import Navbar from './components/navbar';
-import Stats from './components/homepage';
-import Coin from './components/coin';
-import { CoinDetail } from './components/coindetail';
-
+import Footer from './components/footer';
+import Stats from './components/pages/homepage';
+import Coin from './components/pages/coin';
+import { CoinDetail } from './components/pages/coindetail';
 
 const App = () => {
     return (
@@ -28,6 +28,8 @@ const App = () => {
             </Routes>
 
             <div className = "footer">
+
+                <Footer/>
 
             </div>
 
