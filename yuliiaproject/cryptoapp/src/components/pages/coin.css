@@ -63,3 +63,11 @@
   .coin-change.negative {
     color: red;
   }
+
+  .coin-item a {
+    text-decoration: none;
+    color: inherit;
+  }
+  .coin-item a:hover {
+    color: blue;
+  }

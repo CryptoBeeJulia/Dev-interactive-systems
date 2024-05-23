@@ -8,7 +8,7 @@ import Navbar from './components/navbar';
 import Footer from './components/footer';
 import Stats from './components/pages/homepage';
 import Coin from './components/pages/coin';
-import { CoinDetail } from './components/pages/coindetail';
+import CoinDetail from './components/pages/coindetail';
 
 const App = () => {
     return (

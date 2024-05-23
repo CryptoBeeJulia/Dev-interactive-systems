@@ -1,0 +1,33 @@
+.coin-detail-container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  .coin-detail-img {
+    width: 100px;
+    height: 100px;
+    display: block;
+    margin: 0 auto 20px;
+  }
+
+  .coin-detail-info p {
+    margin: 10px 0;
+  }
+  
+  .coin-detail-info strong {
+    font-weight: bold;
+  }
+  
+  .coin-detail-info a {
+    color: #007BFF;
+    text-decoration: none;
+  }
+  
+  .coin-detail-info a:hover {
+    text-decoration: underline;
+  }

@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import {Link} from 'react-router-dom';
 import axios from 'axios';
 import './coin.css';
 
@@ -77,6 +78,7 @@ const Coin = () => {
         <ul className="coin-list">
           {filteredCoins.map((coin, index) => (
             <li key={index} className="coin-item">
+              <Link to={`/coins/${coin.uuid}`}>
               <div>
                 <img className="coin-img" src={coin.iconUrl} alt={coin.name} />
                 <div className="coin-details">
@@ -85,6 +87,7 @@ const Coin = () => {
                   <p className={`coin-change ${coin.change < 0 ? 'negative' : ''}`}>24h change: {coin.change}%</p>
                 </div>
               </div>
+              </Link>
             </li>
           ))}
         </ul>
