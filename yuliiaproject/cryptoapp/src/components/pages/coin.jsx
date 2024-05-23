@@ -1,9 +1,15 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useMemo } from "react";
 import {Link} from 'react-router-dom';
 import axios from 'axios';
 import './coin.css';
 
+const formatNumber = (number) => {
+  return new Intl.NumberFormat('en-US', {
+    minimumFractionDigits: 2,
+    maximumFractionDigits: 3,
+  }).format(number);
 
+};
 
 const options = {
   method: 'GET',
@@ -30,13 +36,6 @@ try {
 	console.error(error);
 }
 
-const formatNumber = (number) => {
-    return new Intl.NumberFormat('en-US', {
-      minimumFractionDigits: 2,
-      maximumFractionDigits: 3,
-    }).format(number);
-  
-};
 
 
 const Coin = () => {
@@ -59,11 +58,13 @@ const Coin = () => {
     const handleSearchChange = (event) => {
       setSearchQuery(event.target.value);
     };
-
-    const filteredCoins = coins.filter(coin => 
-      coin.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
-      coin.symbol.toLowerCase().includes(searchQuery.toLowerCase())
-    );
+  
+    const filteredCoins = useMemo(() => {
+      return coins.filter(coin => 
+        coin.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
+        coin.symbol.toLowerCase().includes(searchQuery.toLowerCase())
+      );
+    }, [coins, searchQuery]);
   
     return (
       <div className="coin-container">

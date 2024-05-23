@@ -2,6 +2,7 @@ import {useParams} from "react-router-dom";
 import React, { useState, useEffect } from "react";
 import axios from 'axios';
 import './coindetail.css';
+import Chart from "./chart";
 
 const formatNumber = (number) => {
   return new Intl.NumberFormat('en-US', {
@@ -65,6 +66,9 @@ const CoinDetail = () => {
         <p><strong>Number of markets:</strong> {coin.numberOfMarkets}</p>
         <p><strong>Description:</strong> {coin.description}</p>
         <p><strong>Website:</strong> <a href={coin.websiteUrl} target="_blank" rel="noopener noreferrer">{coin.websiteUrl}</a></p>
+      </div>
+      <div className="chart-container">
+        <Chart/>
       </div>
     </div>
   );
